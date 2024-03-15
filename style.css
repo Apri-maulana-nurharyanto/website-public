@@ -17,10 +17,19 @@
     width: 0;
 }
 
+div /* DEFAULT */ {
+    background-color: #21212b;
+    color: #f2f2f2;
+}
+
 a {
     text-decoration: none;
     color: var(--warna-hitam);
     font-family: 'Poppins', 'Roboto', 'Open Sans', 'Mochiy Pop One', sans-serif;
+}
+
+p {
+    font-size: 15px;
 }
 
 body {
@@ -46,8 +55,9 @@ body {
 .navbar {
     width: 100%;
     min-height: 60px;
-    background-color: var(--warna-putih);
-    border-bottom: 1px solid #000;
+    /* background-color: var(--warna-putih); */
+    background-color: var(--warna-hitam);
+    border-bottom: 3px solid blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,9 +74,9 @@ body {
 }
 
 .navbar a p {
-    font-weight: bold;
-    font-size: 20px;
-    color: var(--warna-hitam);
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--warna-putih);
 }
 
 .navbar a img {
@@ -81,6 +91,7 @@ body {
 
 .navbar ul li a {
     font-weight: 500;
+    color: var(--warna-putih);
 }
 
 .navbar ul li .dropdown {
@@ -100,7 +111,7 @@ body {
 
 /* batas */
 
-.container {
+.web .container {
     width: 100%;
     min-height: calc(100vh - 60px);
     /* min-height: 100vh; */
@@ -111,12 +122,158 @@ body {
     flex-direction: column;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+    /* padding: 0 150px; */
+}
+
+.web .container .header-section {
+    width: 80%;
+    min-height: 500px;
+    background-color: transparent;
+    display: flex;
+    align-items: start;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.web .container .header-section img {
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #21212b;
+}
+
+.web .container .header-section .blog {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 30px;
+    background-color: transparent;
+}
+
+.web .container .header-section .blog .quotes {
+    width: 100%;
+    height: auto;
+    background-color: #21212b;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+    padding: 10px;
+}
+
+.web .container .header-section .blog button {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #21212b;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #21212b;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--warna-putih);
+}
+
+.web .container .footer {
+    width: 100%;
+    min-height: 350px;
+    background-color: #21212b;
+    color: #fff;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.web .container .footer h2 {
+    text-align: center;
+}
+
+.web .container .footer .table-section {
+    width: 100%;
+    min-height: 150px;
+    background-color: #21212b;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    font-weight: 600;
+}
+
+.web .container .footer .table-section .section {
+    width: 100%;
+    min-height: 150px;
+    background-color: transparent;
+    border-left: 2px solid #f2f2f2;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.block-section {
+    width: 80%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block-section .title-section {
+    width: 100%;
+    min-height: 50px;
+    background-color: #21212b;
+    color: #f2f2f2;
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.block-section .card-layout {
+    display: flex;
+    width: 100%;
     gap: 50px;
-    padding: 0 150px;
+    background-color: transparent;
+}
+
+.block-section .card-layout .card-section {
+    background-color: #f2f2f2;
+    color: #21212b;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #21212b;
+    padding: 10px 30px;
+}
+
+.web .container .container-member {
+    width: 100%;
+    min-height: 500px;
+    background-color: #21212b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.web .container .container-member .title {
+    font-size: 30px;
+    font-weight: 700;
+    min-height: 50px;
+    padding: 20px 40px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.web .container .container-photos {
+    width: 80%;
+    min-height: 800px;
+    background-color: #f2f2f2;
+    border: 1px solid #21212b;
+    border-radius: 20px;
 }
 
 .container .block {
-    width: 100%;
+    width: 80%;
     min-height: 200px;
     background-color: blue;
     color: white;
