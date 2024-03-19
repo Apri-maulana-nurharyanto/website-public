@@ -22,10 +22,31 @@
     gap: 30px;
 }
 
+.refresh {
+    display: none;
+}
+
 .web .container .container-circle {
     width: 80%;
     height: auto;
     background-color: #fff;
     border: 3px solid #21212b;
     margin-top: 30px;
+}
+
+@media screen and (max-width:767px) {
+    .refresh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orangered;
+        color: #f2f2f2;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        z-index: 3;
+    }
 }

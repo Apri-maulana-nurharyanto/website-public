@@ -6,7 +6,7 @@
     <title>Contact Developer</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="../default.css">
-    <link rel="icon" href="../assets logo/logo.png">
+    <link rel="icon" href="../assets logo/logo.png" type="png">
 </head>
 <body>
     <div class="web" id="web-page">
@@ -32,9 +32,49 @@
         </nav>
 
         <div class="container">
-            <!-- <div class="container-form">
-                <form action="#"></form>
-            </div> -->
+            <div class="container-form">
+                <div class="import">
+                    <form action="https://formspree.io/f/mwkgenar" method="post">
+                        <div class="title">Kirim Pesan</div>
+                        <div class="intern" style="grid-area: 2 / 1 / 3 / 4;">
+                            <label for="username"> username :</label>
+                            <input type="text" name="username" id="username" required placeholder="Nama lengkap" minlength="3" maxlength="50">
+                        </div>
+                        <div class="fusion" style="grid-area: 3 / 1 / 4 / 4;">
+                            <div class="intern">
+                                <label for="email"> Email :</label>
+                                <input type="email" id="email" name="email" required placeholder="Alamat email" minlength="5" maxlength="20">
+                            </div>
+                            <div class="intern">
+                                <label for="phone">Nomor telepon :</label>
+                                <input type="number" id="phone" name="phone-number" required placeholder="+6281234567890" minlength="12" maxlength="15">
+                            </div>
+                        </div>
+                        <div class="intern" style="grid-area: 4 / 1 / 6 / 4;">
+                            <label for="message"> Pesan kamu</label>
+                            <textarea id="message" name="message" required minlength="10" maxlength="1000" placeholder="Masukkan pesan kamu di sini!"></textarea>
+                        </div>
+                        <div class="intern" style="grid-area: 6 / 1 / 7 / 3;">
+                            <label for="status"> Status :</label>
+                            <select name="jenjang-status" id="status" name="status" required>
+                                <option value="murid">murid</option>
+                                <option value="guru">guru</option>
+                                <option value="umum">umum</option>
+                            </select>
+                        </div>
+                        <div class="intern" style="grid-area: 6 / 3 / 7 / 4;">
+                            <button type="submit">Kirim</button>
+                        </div>
+                    </form>
+                    <div class="inform">
+                        <div class="header">
+                            <h3 style="color: #21212b; text-shadow: -1px -1px 0 #faff00,  1px -1px 0 #faff00,-1px  1px 0 #faff00,1px  1px 0 #faff00; letter-spacing: 1px;">Hubungi Developer</h3>
+                            <h2 style="color: #faff00;">Apa yang bisa saya bantu?</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cumque quos dolorem optio at perspiciatis culpa? Consequatur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="footer" id="about-us">
                 <div class="title">Tentang Kami</div>
@@ -72,17 +112,12 @@
                         <div class="text">
                             <span class="bolder">Di buat oleh :</span> Developer
                         </div>
-                        <!-- <a href="contact.html">
-                            <button id="message-dev">Hubungi Developer</button>
-                        </a> -->
-                        <div id="message-dev">
-                            <a href="contact.html">
-                                <button>Hubungi Developer</button>
-                            </a>
-                        </div>
+                        <a href="contact.html" id="message-dev">Hubungi Developer</a>
                     </div>
                 </div>
             </div>
+
+            <a href="contact.html" class="refresh"></a>
         </div>
     </div>
 

@@ -1,3 +1,7 @@
+.refresh {
+    display: none;
+}
+
 .web .container .header-section {
     width: 80%;
     min-height: 500px;
@@ -36,7 +40,7 @@
 
 .web .container .header-section .blog .quotes h2 {
     font-size: 30px;
-    color: yellow;
+    color: #faff00;
 }
 
 .web .container .header-section .blog .quotes p {
@@ -48,16 +52,23 @@
     display: none;
 }
 
-.web .container .header-section .blog button {
+.web .container .header-section .blog a {
     width: 200px;
-    height: 40px;
     border: 1px solid #21212b;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 1px 1px 3px #21212b;
     font-weight: bold;
     font-size: 18px;
-    background-color: var(--warna-putih);
+    background-color: blue;
+    color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+.web .container .header-section .blog a:hover {
+    background-color: #21212b;
+    color: #faff00;
 }
 
 .block-section {
@@ -194,7 +205,7 @@
 
 .web .container .con-plan .title {
     background-color: #21212b;
-    color: yellow;
+    color: #faff00;
     text-shadow: 1px 1px 1px #f2f2f2;
     text-align: center;
     padding: 10px;
@@ -258,6 +269,21 @@
 /* BATAS */
 
 @media screen and (max-width:767px) /* layar Handphone */ {
+    .refresh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orangered;
+        color: #f2f2f2;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        z-index: 3;
+    }
+
     .web .container .header-section {
         width: 80%;
         min-height: 500px;
@@ -266,7 +292,7 @@
         flex-direction: column;
         align-items: start;
         box-sizing: border-box;
-        gap: 20px;
+        gap: 0;
         padding: 10px 0;
     }
     
@@ -283,7 +309,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px 0;
-        gap: 20px;
+        gap: 5px;
         background-color: transparent;
     }
     
@@ -298,7 +324,7 @@
     
     .web .container .header-section .blog .quotes h2 {
         font-size: 30px;
-        color: yellow;
+        color: #faff00;
     }
     
     .web .container .header-section .blog .quotes p {
@@ -324,6 +350,7 @@
     
     .block-section {
         width: 80%;
+        margin-top: 250px;
     }
     
     .block-section .title-section {
@@ -460,7 +487,7 @@
     
     .web .container .con-plan .title {
         background-color: #21212b;
-        color: yellow;
+        color: #faff00;
         text-shadow: 1px 1px 1px #f2f2f2;
         text-align: center;
         padding: 10px;

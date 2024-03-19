@@ -11,6 +11,7 @@
     --waktu-transisi: 0.2s ease;
     --warna-putih: #f2f2f2;
     --warna-hitam: #21212b;
+    --warna-kuning: #faff00;
 }
 
 ::-webkit-scrollbar {
@@ -115,7 +116,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: yellow;
+    color: #faff00;
     font-weight: 600;
 }
 
@@ -174,7 +175,7 @@ body {
     height: auto;
     background-color: #21212b;
     color: #fff;
-    padding: 30px 60px 80px 60px;
+    padding: 10px 60px 80px 60px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -245,7 +246,7 @@ body {
 }
 
 .web .container .footer .table-section .section .media-social a:hover {
-    color: yellow;
+    color: #faff00;
     transition: var(--waktu-transisi);
 }
 
@@ -264,13 +265,15 @@ body {
 }
 
 .web .container .footer .table-section .section #message-dev {
-    padding: 5px 12px;
+    padding: 5px 0;
+    text-align: center;
+    max-width: 150px;
     margin-left: 10px;
-    border: 2px solid yellow;
+    border: 2px solid #faff00;
     border-radius: 3px;
     font-weight: 700;
     background-color: #21212b;
-    color: yellow;
+    color: #faff00;
     cursor: pointer;
     font-size: 13px;
     transition: background-color 0.2s, color 0.2s;
@@ -307,7 +310,7 @@ body {
     }
 
     .web.click .navbar {
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid #faff00;
     }
     
     .navbar a {
@@ -373,7 +376,7 @@ body {
         top: 50px;
         left: 0;
         transition: var(--waktu-transisi);
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid #faff00;
     }
 
     .web .navbar ul li a {
@@ -381,8 +384,8 @@ body {
         font-size: 8px;
         color: #f2f2f2;
         transition: var(--waktu-transisi);
-        border: 1px solid yellow;
-        padding: 3px 15px;
+        border: 1px solid #faff00;
+        padding: 5px 15px;
         border-radius: 3px;
         background-color: transparent;
     }
@@ -525,7 +528,7 @@ body {
     }
     
     .web .container .footer .table-section .section .media-social a:hover {
-        color: yellow;
+        color: #faff00;
         transition: var(--waktu-transisi);
     }
     
@@ -535,7 +538,7 @@ body {
         /* margin: 3px 10px 0 10px; */
         margin: 0;
         font-style: italic;
-        font-size: 13px;
+        font-size: 9px;
     }
     
     .web .container .footer .table-section .section .bolder {
@@ -545,38 +548,14 @@ body {
     }
     
     .web .container .footer .table-section .section #message-dev {
-        padding: 0;
+        padding: 3px 7px;
         margin: 0;
-        border: 1px solid blue;
-        border-radius: 0;
-        background-color: #21212b;
-        color: yellow;
-        cursor: pointer;
-        font-size: 0;
-    }
-
-    .web .container .footer .table-section .section #message-dev:hover {
-        border: none;
-        border-radius: 0;
-        background-color: transparent;
-        color: transparent;
-    }
-
-    .web .container .footer .table-section .section #message-dev button {
-        border: 1px solid yellow;
+        border: 2px solid #faff00;
         border-radius: 3px;
-        font-weight: 700;
         background-color: #21212b;
-        color: yellow;
-        cursor: pointer;
-        font-size: 3px;
-        transition: background-color 0.2s, color 0.2s;
-    }
-
-    .web .container .footer .table-section .section #message-dev button:hover {
-        border: 2px solid #f2f2f2;
-        border-radius: 5px;
-        background-color: blue;
         color: #f2f2f2;
+        color: #faff00;
+        cursor: pointer;
+        font-size: 8px;
     }
 }

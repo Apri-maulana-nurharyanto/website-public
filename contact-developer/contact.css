@@ -1,0 +1,334 @@
+.container {
+    background-color: #f2f2f2;
+    gap: 0;
+}
+
+.container .refresh {
+    display: none;
+}
+
+.container-form {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+
+.container .container-form .import {
+    width: 80%;
+    /* min-height: 500px; */
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+.container .container-form .import form {
+    width: 40%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding: 10px 30px 50px 30px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 30px);
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+}
+
+.container .container-form .import form .title {
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    color: #21212b;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 8px 10px;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.container .container-form .import form .intern {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.container .container-form .import form .fusion {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+.container .container-form .import form .intern label {
+    font-weight: 600;
+}
+
+.container .container-form .import form .intern input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #21212b;
+    font-weight: 500;
+}
+
+.container .container-form .import form .intern input:focus {
+    background-color: #21212b;
+    color: #faff00;
+    font-weight: 600;
+}
+
+.container .container-form .import form .intern input:hover {
+    border: 2px solid blue;
+}
+
+/* .container .container-form .import form .fusion .intern label {
+    font-weight: 600;
+}
+
+.container .container-form .import form .fusion .intern input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #21212b;
+} */
+
+.container .container-form .import form .intern select {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: 2px solid #21212b;
+    cursor: pointer;
+}
+
+.container .container-form .import form .intern #message {
+    max-width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #21212b;
+    border: 2px solid #21212b;
+    margin-top: 20px;
+}
+
+.container .container-form .import form button {
+    padding: 10px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 23px;
+    border: none;
+    background-color: blue;
+    color: #f2f2f2;
+}
+
+.container .container-form .import form button:hover {
+    background-color: #21212b;
+    transition: var(--waktu-transisi);
+    color: #faff00;
+}
+
+.container .container-form .import .inform {
+    width: 60%;
+    min-height: 530px;
+    background-color: #21212b;
+    color: #f2f2f2;
+}
+
+.container .container-form .import .inform .header {
+    width: 100%;
+    height: auto;
+    background-color: #21212b;
+    padding: 50px 40px;
+}
+
+.container .container-form .import .inform .help-about {
+    width: 10%;
+    height: 100%;
+    background-color: #faff00;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        background-color: #f2f2f2;
+        gap: 0;
+    }
+
+    .container .refresh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orangered;
+        color: #f2f2f2;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        z-index: 3;
+    }
+    
+    .container-form {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        gap: 20px;
+    }
+    
+    .container .container-form .import {
+        width: 100%;
+        /* min-height: 500px; */
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .container .container-form .import form {
+        width: 90%;
+        height: 100%;
+        background-color: #f2f2f2;
+        padding: 10px 30px 50px 30px;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 20px);
+        grid-row-gap: 50px;
+        grid-column-gap: 10px;
+    }
+    
+    .container .container-form .import form .title {
+        width: auto;
+        height: auto;
+        text-align: center;
+        border-radius: 10px;
+        color: #21212b;
+        font-weight: 800;
+        font-size: 25px;
+        padding: 8px 10px;
+        grid-area: 1 / 1 / 2 / 4;
+    }
+    
+    .container .container-form .import form .intern {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    
+    .container .container-form .import form .fusion {
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+    
+    .container .container-form .import form .intern label {
+        font-weight: 600;
+        font-size: 13px;
+    }
+    
+    .container .container-form .import form .intern input {
+        width: 100%;
+        padding: 7px 10px;
+        border-radius: 5px;
+        border: 2px solid #21212b;
+        font-weight: 500;
+    }
+    
+    .container .container-form .import form .intern input:focus {
+        background-color: #21212b;
+        color: #faff00;
+        font-weight: 600;
+    }
+    
+    .container .container-form .import form .intern input:hover {
+        border: 2px solid blue;
+    }
+    
+    /* .container .container-form .import form .fusion .intern label {
+        font-weight: 600;
+    }
+    
+    .container .container-form .import form .fusion .intern input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #21212b;
+    } */
+    
+    .container .container-form .import form .intern select {
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid #21212b;
+        cursor: pointer;
+    }
+    
+    .container .container-form .import form .intern #message {
+        max-width: 100%;
+        min-height: 120px;
+        padding: 10px;
+        border-radius: 5px;
+        color: #21212b;
+        border: 2px solid #21212b;
+        margin-top: 0;
+    }
+    
+    .container .container-form .import form button {
+        padding: 7px 30px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        border: none;
+        background-color: blue;
+        color: #f2f2f2;
+    }
+    
+    .container .container-form .import form button:hover {
+        background-color: #21212b;
+        transition: var(--waktu-transisi);
+        color: #faff00;
+    }
+    
+    .container .container-form .import .inform {
+        width: 90%;
+        min-height: 500px;
+        background-color: #21212b;
+        color: #f2f2f2;
+        border-radius: 10px;
+    }
+    
+    .container .container-form .import .inform .header {
+        width: 100%;
+        height: auto;
+        background-color: #21212b;
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+    
+    .container .container-form .import .inform .help-about {
+        width: 10%;
+        height: 100%;
+        background-color: #faff00;
+    }
+}
