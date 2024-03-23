@@ -47,6 +47,10 @@ body {
     overflow: hidden;
 }
 
+.refresh {
+    display: none;
+}
+
 /* BATAS */
 
 .web {
@@ -112,7 +116,7 @@ body {
     font-weight: 500;
     color: var(--warna-putih);
     z-index: 2;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navbar ul li a:hover {
@@ -160,7 +164,7 @@ body {
     /* min-height: 100vh; */
     height: 150vh;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     flex-direction: column;
@@ -235,7 +239,6 @@ body {
 .web .container .footer .table-section .section .media-social img {
     width: 25px;
     border-radius: 5px;
-    transform: rotate(-3deg);
 }
 
 .web .container .footer .table-section .section .media-social a {
@@ -287,6 +290,28 @@ body {
 }
 
 @media screen and (max-width:767px) /* layar Handphone */ {
+    .refresh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orangered;
+        color: #f2f2f2;
+        font-size: 25px;
+        font-weight: 600;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        z-index: 3;
+    }
+
+    .refresh:hover {
+        color: #f2f2f2;
+    }
+
     .web {
         width: 100%;
         height: 100vh;
@@ -365,13 +390,15 @@ body {
     }
 
     .web.click .navbar ul {
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 5px;
         list-style-type: none;
         background-color: #21212b;
         min-width: 100%;
-        padding: 5px 0;
-        gap: 10px;
+        padding: 5px 10px;
         position: absolute;
         top: 50px;
         left: 0;
@@ -381,11 +408,11 @@ body {
 
     .web .navbar ul li a {
         font-weight: 600;
-        font-size: 8px;
+        font-size: 10px;
         color: #f2f2f2;
         transition: var(--waktu-transisi);
         border: 1px solid #faff00;
-        padding: 5px 15px;
+        padding: 8px 13px;
         border-radius: 3px;
         background-color: transparent;
     }
@@ -517,7 +544,6 @@ body {
     .web .container .footer .table-section .section .media-social img {
         width: 18px;
         border-radius: 5px;
-        transform: rotate(0);
     }
     
     .web .container .footer .table-section .section .media-social a {
@@ -559,3 +585,15 @@ body {
         font-size: 8px;
     }
 }
+
+/* BATAS */
+
+/* .box {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    border-radius: 5px;
+} */

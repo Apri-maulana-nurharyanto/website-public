@@ -3,14 +3,14 @@
     gap: 0;
 }
 
-.container .refresh {
-    display: none;
+.footer {
+    background-color: #f2f2f2;
 }
 
 .container-form {
     width: 100%;
     height: auto;
-    background-color: #fff;
+    background-color: #f2f2f2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,13 +24,18 @@
     height: auto;
     border-radius: 10px;
     display: flex;
+    align-items: center;
 }
 
 .container .container-form .import form {
     width: 40%;
-    height: 100%;
-    background-color: #f2f2f2;
-    padding: 10px 30px 50px 30px;
+    max-height: 550px;
+    background-color: #fff;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    box-shadow:  -5px -5px 5px #9d9d9d,
+             2px 0 2px yellow;
+    z-index: 2;
     /* display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +43,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 30px);
-    grid-row-gap: 50px;
+    grid-row-gap: 40px;
     grid-column-gap: 20px;
 }
 
@@ -50,7 +55,6 @@
     color: #21212b;
     font-weight: 800;
     font-size: 25px;
-    padding: 8px 10px;
     grid-area: 1 / 1 / 2 / 4;
 }
 
@@ -80,6 +84,13 @@
     font-weight: 500;
 }
 
+.container .container-form .import form .intern input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Memastikan panah benar-benar hilang */
+}
+
+
 .container .container-form .import form .intern input:focus {
     background-color: #21212b;
     color: #faff00;
@@ -103,78 +114,137 @@
 
 .container .container-form .import form .intern select {
     width: 100%;
-    padding: 7px 10px;
+    padding: 10px;
     border-radius: 5px;
     border: 2px solid #21212b;
     cursor: pointer;
+    color: #9d9d9d;
+}
+
+.container .container-form .import form .intern select:hover {
+    border: 2px solid blue;
 }
 
 .container .container-form .import form .intern #message {
+    min-width: 100%;
     max-width: 100%;
     min-height: 100px;
     padding: 10px;
     border-radius: 5px;
     color: #21212b;
     border: 2px solid #21212b;
-    margin-top: 20px;
+}
+
+.container .container-form .import form .intern #message:hover {
+    border: 2px solid blue;
 }
 
 .container .container-form .import form button {
-    padding: 10px 30px;
+    padding: 10px 50px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 23px;
+    margin-top: 25px;
     border: none;
     background-color: blue;
     color: #f2f2f2;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .container .container-form .import form button:hover {
     background-color: #21212b;
-    transition: var(--waktu-transisi);
+    transition: 0.5s;
     color: #faff00;
+}
+
+.container .container-form .import form .direct {
+    width: 100%;
+    color: #21212b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .container-form .import form .direct p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.container .container-form .import form .direct span {
+    font-size: 13px;
+    color: blue;
+    font-weight: 400;
+}
+
+.container .container-form .import form::after /*#buble*/ {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 50px solid #fff;
+    transform: translateX(450px) translateY(-450px);
+    z-index: 3;
 }
 
 .container .container-form .import .inform {
     width: 60%;
-    min-height: 530px;
+    height: 450px;
     background-color: #21212b;
     color: #f2f2f2;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 3px yellow;
 }
 
 .container .container-form .import .inform .header {
     width: 100%;
-    height: auto;
-    background-color: #21212b;
-    padding: 50px 40px;
+    height: 40%;
+    padding: 40px 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container .container-form .import .inform .help-about {
-    width: 10%;
-    height: 100%;
-    background-color: #faff00;
+.container .container-form .import .inform .header h3 {
+    color: #21212b;
+    text-shadow: -1px -1px 0 #faff00,  1px -1px 0 #faff00,-1px  1px 0 #faff00,1px  1px 0 #faff00;
+    letter-spacing: 1px;
+    font-size: 20px;
+    transform: translatey(10px);
 }
+
+.container .container-form .import .inform .header h2 {
+    color: #faff00;
+    font-size: 30px;
+}
+
+.container .container-form .import .inform .header p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.container .container-form .import .inform .dev-about {
+    width: 85%;
+    height: 60%;
+}
+
+.container .container-form .import .inform .dev-about h2 {
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transform: translateX(-15px)    ;
+}
+
+/* BATAS */
 
 @media screen and (max-width: 767px) {
     .container {
         background-color: #f2f2f2;
         gap: 0;
-    }
-
-    .container .refresh {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: orangered;
-        color: #f2f2f2;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        position: fixed;
-        bottom: 10px;
-        right: 15px;
-        z-index: 3;
     }
     
     .container-form {
@@ -213,6 +283,18 @@
         grid-template-rows: repeat(6, 20px);
         grid-row-gap: 50px;
         grid-column-gap: 10px;
+    }
+    
+    .container .container-form .import form::after /*#buble*/ {
+        content: "";
+        display: none;
+        /*width: 0;
+        height: 0;
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-left: 50px solid #fff;
+        transform: translateX(450px) translateY(-450px);
+        z-index: 3; */
     }
     
     .container .container-form .import form .title {

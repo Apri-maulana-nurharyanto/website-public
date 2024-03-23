@@ -1,10 +1,6 @@
-.refresh {
-    display: none;
-}
-
 .web .container .header-section {
     width: 80%;
-    min-height: 500px;
+    max-height: 500px;
     background-color: transparent;
     display: flex;
     align-items: start;
@@ -58,13 +54,23 @@
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 1px 1px 3px #21212b;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
     background-color: blue;
     color: #f2f2f2;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
+/* .web .container .header-section .blog a span {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 30px;
+    color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
 
 .web .container .header-section .blog a:hover {
     background-color: #21212b;
@@ -185,105 +191,104 @@
     display: flex;
     justify-content: space-between;
     background-color: transparent;
-    padding: 0 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #21212b;
 }
 
 .web .container .container-member .con-grid .card-force .description p {
     color: blue;
-    font-weight: 800;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 13px;
 }
 
-.web .container .con-plan {
+.container .con-schedule {
     width: 80%;
     height: auto;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
-.web .container .con-plan .title {
+.container .con-schedule .title {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
     background-color: #21212b;
     color: #faff00;
-    text-shadow: 1px 1px 1px #f2f2f2;
-    text-align: center;
-    padding: 10px;
-    font-weight: 700;
-    font-size: 25px;
     border-radius: 5px;
 }
 
-.web .container .con-plan .schedule-layout {
-    width: 100%;
-    min-height: 100px;
-    background-color: #fff;
+.container .con-schedule .grid-schedule {
+    background-color: transparent;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px auto;
+    grid-template-rows: repeat(4, 300px);
     grid-column-gap: 20px;
-    grid-row-gap: 10px;
+    grid-row-gap: 30px;
 }
 
-.web .container .con-plan .schedule-layout .schedule-row {
+.container .con-schedule .grid-schedule .box {
     width: 100%;
-    height: auto;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-    color: #21212b;
-    border: 1px solid #21212b;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    grid-area: 1 / 1 / 2 / 4;
-}
-
-.web .container .con-plan  .schedule-layout .schedule-row .hot {
-    width: 100%;
-    min-height: 200px;
-    background-color: #21212b;
-    display: flex;
-}
-
-.web .container .con-plan  .schedule-layout .schedule-row .hot img {
     height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px 30px 20px 20px;
+    border: 1px solid #21212b;
+    position: relative;
 }
 
-.web .container .con-plan .schedule-layout .schedule-column {
+.container .con-schedule .grid-schedule .box img {
     width: 100%;
-    min-height: 400px;
-    background-color: transparent;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 0;
+    border-radius: 5px 30px 20px 20px;
+    position: absolute;
 }
-.web .container .con-plan .schedule-layout .schedule-column .box {
+
+.container .con-schedule .grid-schedule .box h3 {
+    width: 200px;
+    color: #f2f2f2;
+    background-color: blue;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transform: translatex(-10px) translateY(15px);
+}
+
+.container .con-schedule .grid-schedule .box .blur {
     width: 100%;
-    min-height: 200px;
-    background-color: #f2f2f2;
-    border: 1px solid #21212b;
+    height: 30%;
+    background-color: #21212b;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+}
+
+.container .con-schedule .grid-schedule .box .blur .content {
+    padding: 10px 15px;
+}
+
+.container .con-schedule .grid-schedule .box .blur .content h4 {
+    color: #faff00;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.container .con-schedule .grid-schedule .box .blur .content p {
+    color: #f2f2f2;
+    font-size: 11px;
+    font-weight: 400;
 }
 
 /* BATAS */
 
 @media screen and (max-width:767px) /* layar Handphone */ {
-    .refresh {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: orangered;
-        color: #f2f2f2;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        position: fixed;
-        bottom: 10px;
-        right: 15px;
-        z-index: 3;
-    }
-
     .web .container .header-section {
         width: 80%;
         min-height: 500px;
@@ -328,7 +333,7 @@
     }
     
     .web .container .header-section .blog .quotes p {
-        font-size: 12px;
+        font-size: 10px;
         color: #f2f2f2;
     }
     
@@ -380,7 +385,7 @@
         background-color: #f2f2f2;
         color: #21212b;
         width: 100%;
-        height: 100px;
+        height: 80px;
         border: 1px solid #21212b;
         padding: 5px 20px;
         display: flex;
@@ -398,16 +403,16 @@
     }
     
     .block-section .card-layout .card-section .card-brand img {
-        width: 35px;
+        width: 30px;
     }
     
     .block-section .card-layout .card-section .card-brand a {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .block-section .card-layout .card-section p {
-        font-size: 12px;
+        font-size: 10px;
         margin-top: 3px;
     }
     
@@ -418,7 +423,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
+        padding: 30px;
         gap: 50px;
     }
     
@@ -431,6 +436,7 @@
         border-radius: 10px;
         color: #f2f2f2;
         width: 80%;
+        text-align: center;
     }
     
     .web .container .container-member .con-grid {
@@ -476,76 +482,96 @@
         font-size: 15px;
     }
     
-    .web .container .con-plan {
+    .container .con-schedule {
         width: 80%;
         height: auto;
         background-color: transparent;
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: 50px;
+    }
+
+    .container .con-schedule .title {
+        font-size: 13px;
     }
     
-    .web .container .con-plan .title {
-        background-color: #21212b;
-        color: #faff00;
-        text-shadow: 1px 1px 1px #f2f2f2;
-        text-align: center;
-        padding: 10px;
-        font-weight: 700;
-        font-size: 25px;
-        border-radius: 5px;
-    }
-    
-    .web .container .con-plan .schedule-layout {
-        width: 100%;
-        min-height: 100px;
-        background-color: #fff;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 200px auto;
-        grid-column-gap: 20px;
-        grid-row-gap: 10px;
-    }
-    
-    .web .container .con-plan .schedule-layout .schedule-row {
-        width: 100%;
-        height: auto;
-        background-color: #f2f2f2;
-        border-radius: 5px;
-        color: #21212b;
-        border: 1px solid #21212b;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        grid-area: 1 / 1 / 2 / 4;
-    }
-    
-    .web .container .con-plan  .schedule-layout .schedule-row .hot {
-        width: 100%;
-        min-height: 200px;
-        background-color: #21212b;
+    /* .container .con-schedule .top-schedule {
         display: flex;
     }
     
-    .web .container .con-plan  .schedule-layout .schedule-row .hot img {
-        height: 100%;
+    .container .con-schedule .top-schedule .title-schedule {
+        background-color: orangered;
+        width: 30%;
     }
     
-    .web .container .con-plan .schedule-layout .schedule-column {
-        width: 100%;
-        min-height: 400px;
+    .container .con-schedule .top-schedule .top-hot {
+        background-color: #faff00;
+        width: 70%;
+    } */
+    
+    .container .con-schedule .grid-schedule {
         background-color: transparent;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 300px);
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
     }
-    .web .container .con-plan .schedule-layout .schedule-column .box {
+    
+    .container .con-schedule .grid-schedule .box {
         width: 100%;
-        min-height: 200px;
+        height: 100%;
         background-color: #f2f2f2;
+        border-radius: 5px 30px 20px 20px;
         border: 1px solid #21212b;
+        position: relative;
+    }
+    
+    .container .con-schedule .grid-schedule .box img {
+        width: 100%;
+        border-radius: 5px 30px 20px 20px;
+        position: absolute;
+    }
+    
+    .container .con-schedule .grid-schedule .box h3 {
+        width: 200px;
+        color: #f2f2f2;
+        background-color: blue;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 10px;
+        transform: translatex(-10px) translateY(15px);
+    }
+    
+    .container .con-schedule .grid-schedule .box .blur {
+        width: 100%;
+        height: 30%;
+        background-color: #21212b;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0 0 20px 20px;
+        opacity: 0.8;
+        backdrop-filter: blur(10px);
+    }
+    
+    .container .con-schedule .grid-schedule .box .blur .content {
+        padding: 10px 15px;
+    }
+    
+    .container .con-schedule .grid-schedule .box .blur .content h4 {
+        color: #faff00;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 600;
+        margin-left: 5px;
+    }
+    
+    .container .con-schedule .grid-schedule .box .blur .content p {
+        color: #f2f2f2;
+        font-size: 11px;
+        font-weight: 400;
     }
     
 }
